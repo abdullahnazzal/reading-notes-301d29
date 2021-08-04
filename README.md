@@ -15,7 +15,7 @@
 
 | File      | Link |
 | ----------- | ----------- |
-<!-- | ****  | [](class-01.md)| -->
+| Class 01  | [Introduction to React and Components](class-01.md)|
 
 
 
