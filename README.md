@@ -17,6 +17,8 @@
 | ----------- | ----------- |
 | Read: Class 01  | [Introduction to React and Components](class-01.md)|
 | Read: Class 02  | [State and Props](class-02.md)|
+| Read: Class 03  | [Passing Functions as Props](class-03.md)|
+
 
 
 
