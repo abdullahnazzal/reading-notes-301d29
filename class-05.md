@@ -1,94 +1,61 @@
-# PassReadings: React and Forms
-## **Forms**:
+# Readings: Putting it all together
+## **Thinking in React**:
 
-HTML form elements work a bit differently from other DOM elements in React, because form elements naturally keep some internal state. For example, this form in plain HTML accepts a single name:
+React is, in our opinion, the premier way to build big, fast Web apps with JavaScript. It has scaled very well for us at Facebook and Instagram.
 
-`<form>`
-
-  `<label>`
-  
-  `Name:`
-    `<input type="text" name="name" />`
-
-  `</label>`
-
-  `<input type="submit" value="Submit" />`
-
-`</form>`
+One of the many great parts of React is how it makes you think about apps as you build them. In this document, we’ll walk you through the thought process of building a searchable product data table using React.
 
 
 
-**Controlled Components**
+**How would you break a mock into a component heirarchy?**
+
+Step 1: Break The UI Into A Component Hierarchy 
+Step 2: Build A Static Version in React 
+Step 3: Identify The Minimal (but complete) Representation Of UI State 
+Step 4: Identify Where Your State Should Live 
+Step 5: Add Inverse Data Flow 
+
+**What is the single responsibility principle and how does it apply to components?**
+
+ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.
+
+**What does it mean to build a ‘static’ version of your application?**
+
+This is the easiest way is to build a version that takes your data model and renders the UI but has no interactivity.
+
+**Once you have a static application, what do you need to add?**
+
+I need to build components that reuse other components and pass data using props. 
+
+**What are the three questions you can ask to determine if something is state?**
+
+
+1- Is it passed in from a parent via props? If so, it probably isn’t state.
+
+2- Does it remain unchanged over time? If so, it probably isn’t state.
+
+3- Can you compute it based on any other state or props in your component? If so, it isn’t state.
 
 
 
-In HTML, form elements such as `<input>`, `<textarea>`, and `<select>` typically maintain their own state and update it based on user input. In React, mutable state is typically kept in the state property of components, and only updated with `setState()`.
-
-We can combine the two by making the React state be the “single source of truth”. Then the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a “controlled component”.
-
-**Keys**
-
-Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:
-
-`const numbers = [1, 2, 3, 4, 5];`
-
-`const listItems = numbers.map((number) =>`
-
-  `<li key={number.toString()}>`
-      `{number}</li> `
-
-`);`
-
-  
 
 
+**How can you identify where state needs to live?**
 
---------
+For each piece of state in your application:
 
+- Identify every component that renders something based on that state.
 
-**To know more please 
-[visit this page](https://reactjs.org/docs/forms.html)**
+- Find a common owner component (a single component above all the components that need the state in the hierarchy).
 
--------
+- Either the common owner or another component higher up in the hierarchy should own the state.
 
-
-## **The Conditional (Ternary) Operator Explained:**
-
-The ternary operator:
-
-
-`condition ? value if true : value if false`
-
-
-Here’s what you need to know:
-
-1- The `condition` is what you’re actually testing. The result of your condition should be `true` or `false` or at least coerce to either boolean value.
-
-2- A `?` separates our conditional from our true value. Anything between the `?` and the `:` is what is executed if the `condition` evaluates to true.
-
-3- Finally a : colon. If your condition evaluates to false, any code after the colon is executed.
-
-**Example — Driver Age**
-
-We’ll take a moment to revisit the initial example in this article:
-
-`let person = {`
-
-  `name: 'tony',`
-
-  `age: 20,`
-
-  `driver: null`
-
-`};`
-
-`person.driver = person.age >=16 ? 'Yes' : 'No';`
-
+- If you can’t find a component where it makes sense to own the state, create a new component solely for holding the state and add it somewhere in the hierarchy above the common owner component.
 
 --------
 
 
 **To know more please 
-[visit this page](https://codeburst.io/javascript-the-conditional-ternary-operator-explained-cac7218beeff)**
+[visit this page](https://reactjs.org/docs/thinking-in-react.html)**
 
 -------
