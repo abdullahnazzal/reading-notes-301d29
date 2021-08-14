@@ -20,7 +20,7 @@
 | Read: Class 03  | [Passing Functions as Props](class-03.md)|
 | Read: Class 04  | [React and Forms](class-04.md)|
 | Read: Class 05  | [Putting it all together](class-05.md)|
-
+| Read: Class 06  | [NODE.JS](class-06.md)|
 
 
 
