@@ -22,6 +22,7 @@
 | Read: Class 05  | [Putting it all together](class-05.md)|
 | Read: Class 06  | [NODE.JS](class-06.md)|
 | Read: Class 07  | [REST](class-07.md)|
+| Read: Class 08  | [APIs](class-08.md)|
 
 
 

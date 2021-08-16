@@ -3,6 +3,7 @@
 
 ### **What is a component?**
 
+
 <br>
 A component is a modular, portable, replaceable, and reusable set of well-defined functionality that encapsulates its implementation and exporting it as a higher-level interface.
 
