@@ -25,4 +25,5 @@
 | Read: Class 08  | [APIs](class-08.md)|
 | Read: Class 09  | [FUNCTIONAL PROGRAMMING](class-09.md)|
 | Read: Class 10  | [In memory storage](class-10.md)|
+| Read: Class 11  | [Readings: Authentication](class-11.md)|
 
