@@ -27,3 +27,4 @@
 | Read: Class 10  | [In memory storage](class-10.md)|
 | Read: Class 11  | [Authentication](class-11.md)|
 | Read: Class 12  | [Mongo and Mongoose](class-12.md)|
+| Read: Class 13  | [CRUD](class-13.md)|
